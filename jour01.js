@@ -44,15 +44,22 @@ console.log(template);
 
 // BONUS
 
+// Selection d'un caractère
 var changed = 'Bonjour';
 console.log(changed.charAt(3));
 console.log(changed[3]);
 
+// Remplacement d'une chaine de caractère
 var method1 = changed.replace('o', 'a').replace('o', 'a');
 console.log(method1);
 // Ou alors :
 var method2 = changed.replace(/o/g, 'a');
 console.log(method2);
+// Ou alors :
+let method3 = changed.split('o');
+console.log(method3);
+method3 = method3.join('a');
+console.log(method3);
 
 //*  *//
 
