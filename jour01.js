@@ -16,3 +16,10 @@ console.log(`Nice to meet you ${name}`);
 
 var testLenght = "I'm very long !";
 console.log(testLenght.length);
+
+// 05 - Replace
+
+var food = 'croissant is meh';
+food = food.replace('meh', 'so good');
+console.log(food);
+
