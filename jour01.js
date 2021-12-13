@@ -23,3 +23,15 @@ var food = 'croissant is meh';
 food = food.replace('meh', 'so good');
 console.log(food);
 
+// 06 - Up and Down
+
+let basic = 'This is cool';
+let basicUp = basic.toUpperCase();
+let basicDown = basic.toLowerCase();
+console.log(basic, basicUp, basicDown);
+
+// 07 - Split
+
+let word = 'banana';
+let letters = word.split('');
+console.log(letters);
