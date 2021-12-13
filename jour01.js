@@ -41,3 +41,45 @@ console.log(letters);
 let age = 32;
 let template = `I'm ${age} years old`;
 console.log(template);
+
+// BONUS
+
+var changed = 'Bonjour';
+console.log(changed.charAt(3));
+console.log(changed[3]);
+
+var method1 = changed.replace('o', 'a').replace('o', 'a');
+console.log(method1);
+// Ou alors :
+var method2 = changed.replace(/o/g, 'a');
+console.log(method2);
+
+//*  *//
+
+let string1 = "konexio";
+let string2 = new String(string1);
+let number1 = 32;
+let boolean1 = false;
+console.log(typeof string1);
+console.log(typeof string2);
+console.log(typeof number1);
+console.log(typeof boolean1);
+
+//* *//
+
+let result = '1 + 1';
+let result2 = new String('1 + 1');
+console.log(eval(result)); // Traite la chaîne primitive comme code source
+console.log(eval(result2));
+console.log(eval(result.valueOf())); // Result converti la string en primitif
+
+/* Echappement des caractères */
+
+let chaineLongue = 'Voici une\nchaine longue'; // Methode 1
+console.log(chaineLongue);
+let chaineLongue2 = `Voici une
+chaine longue`; // Methode 2
+console.log(chaineLongue2);
+
+let quotes = 'Voici une \"phrase\" avec guillemets';
+console.log(quotes);
