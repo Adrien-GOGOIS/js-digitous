@@ -9,8 +9,8 @@ console.log(test);
 
 // 03 - Concatenation
 
-var name = 'Adrien';
-console.log(`Nice to meet you ${name}`);
+const firstname = 'Adrien';
+console.log(`Nice to meet you ${firstname}`);
 
 // 04 - String lenght
 
@@ -19,8 +19,9 @@ console.log(testLenght.length);
 
 // 05 - Replace
 
-var food = 'croissant is meh';
-food = food.replace('meh', 'so good');
+let food = 'croissant is meh';
+food = food.replace('meh', 'so good'); // "Ré-assigner" ou "muter" la variable
+// La "méthode" replace contient 2 "paramètres"
 console.log(food);
 
 // 06 - Up and Down
