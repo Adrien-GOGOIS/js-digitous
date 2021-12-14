@@ -61,3 +61,96 @@ if (score >= limit && password.length >= 5) {
 } else {
     console.log('Nothing is good');
 }
+
+// BONUS
+
+let random = Math.floor(Math.random() * 6 + 1);
+
+random === 6 ? console.log('Yes I win!') : console.log('So close...');
+
+// BONUS II
+
+let month = 'October';
+
+switch (month) {
+    case 'January' :
+        console.log('Winter');
+        break;
+    case 'February' :
+        console.log('Winter');
+        break;
+    case 'March' :
+        console.log('Winter');
+        break;
+    case 'April' :
+        console.log('Spring');
+        break;
+    case 'May' :
+        console.log('Spring');
+        break;
+    case 'June' :
+        console.log('Spring');
+        break;
+    case 'July' :
+        console.log('Summer');
+        break;
+    case 'August' :
+        console.log('Summer');
+        break;
+    case 'September' :
+        console.log('Summer');
+        break;
+    case 'October' :
+        console.log('Fall');
+        break;
+    case 'November' :
+        console.log('Fall');
+        break;
+    case 'December' :
+        console.log('Fall');
+        break;
+}
+console.log('END PROGRAM');
+
+//METHODE 2 :
+
+if (month === 'January' || month === 'February' || month === 'March') {
+    console.log('Winter');
+} else if (month === 'April' || month === 'May' || month === 'June') {
+    console.log('Spring');
+} else if (month === 'July' || month === 'August' || month === 'September') {
+    console.log('Summer');
+} else {
+    console.log('Fall');
+}
+console.log('END PROGRAM');
+
+// BONUS III
+
+let roundedNumber = 3.4;
+let result = roundedNumber - Math.floor(roundedNumber);
+
+if (result >= 0.5) {
+    roundedNumber = Math.ceil(roundedNumber);
+    console.log(roundedNumber);
+} else {
+    roundedNumber = Math.floor(roundedNumber);
+    console.log(roundedNumber);
+}
+
+//
+
+let roundedNumber1 = 12.5;
+let stringConvert = roundedNumber1.toString();
+let splitNumber = stringConvert.split('.');
+
+if (parseInt(splitNumber[1]) >= 5) {
+    stringConvert = Math.ceil(stringConvert);
+    console.log(stringConvert);
+} else {
+    stringConvert = Math.floor(stringConvert);
+    console.log(stringConvert);
+}
+
+
+
