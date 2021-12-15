@@ -32,3 +32,4 @@ const megaDev = ['Kevin', 'Jessica', 'Charles', 'Chris', 'Andrei', 'Pauline', 'L
 'Chi', 'Axel', 'Adrien', 'David', 'Anita', 'Nicolas'];
 
 console.log(megaDev[Math.floor(Math.random() * megaDev.length)]);
+
