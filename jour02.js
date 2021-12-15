@@ -1,19 +1,19 @@
 // 01 - Number
 
-let integer = 102;
-let float = 13.9;
+const integer = 102;
+const float = 13.9;
 console.log(integer, float);
 
 // 02 - Convert
 
-let basic = 34;
-let stringified = basic.toString();
+const basic = 34;
+const stringified = basic.toString();
 console.log(stringified);
 
 // 03 - Round
 
-let num = 1.5;
-let rounded = Math.round(num);
+const num = 1.5;
+const rounded = Math.round(num);
 console.log(rounded);
 
 // 04 - Arithmétique
@@ -25,7 +25,7 @@ console.log(test - bis);
 console.log(test * bis);
 console.log(test / bis);
 console.log(test ** bis); // 12 puissance 5
-console.log(test % bis); // Reste de la division 12/5
+console.log(test % bis); // Reste de la division 12/5 = 2 --> 'MODULO'
 
 // 05 - Comparaison
 
@@ -41,8 +41,8 @@ console.log(test > bis);
 
 // 06 - Condition
 
-let limit = 50;
-let score = 64;
+const limit = 50;
+const score = 64;
 score >= limit ? console.log('Ok good!') : console.log('Oh nooo...');
 
 // 07 - Condition II
