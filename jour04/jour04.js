@@ -43,3 +43,42 @@ checkIfEven(3);
 checkIfEven(10);
 checkIfEven(123);
 checkIfEven(2448);
+
+// 04 - COMPARE
+
+function compare(num1, num2) {
+    if (num1 > num2) {
+        console.log(`${num1} is bigger`);
+    } else if (num2 > num1) {
+        console.log(`${num2} is bigger`);
+    } else {
+        console.log('Both are the same');
+    }
+}
+
+compare(2, 4);
+compare(1, 0);
+compare(3, 3);
+
+// 05 - Add Up
+
+function addUp(num) {
+    for (let i = 1; i < 12; i++) {
+        num = num + i;
+    }
+    console.log(num);
+}
+
+addUp(12);
+
+// 06 - Time
+
+function format(num) {
+    let hours = Math.floor(num / 3600);
+    let minutes = Math.floor((num % 3600) / 60);
+    let seconds = Math.ceil(num % 60 % 60);
+
+    console.log(`${hours} : ${minutes} : ${seconds}`);
+}
+
+format(3700);
