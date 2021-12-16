@@ -17,7 +17,12 @@ generatePassword(15);
 // BONUS II
 
 function launchDice(numberOfDice) {
-    return numberOfDice * Math.floor(Math.random() * (6 - 1 + 1) + 1);
+    let result = 0;
+        for (let i = 1; i <= numberOfDice; i++) {
+            let launch = Math.floor(Math.random() * (6 - 1 + 1) + 1);
+            result += launch;
+        }
+    return result;
 }
 
 let joueur1 = launchDice(5);
