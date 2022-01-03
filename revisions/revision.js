@@ -56,7 +56,28 @@ console.log(checkPal('laptop'));
 
 // 04 - Swap
 
+function swap(stringSwap) {
+    let splitSwap = stringSwap.split('');
+    let result5 = [];
 
+    for (let i = 0; i <= splitSwap.length - 1; i++) {
+
+        if (splitSwap[i] == splitSwap[i].toLowerCase()) {
+            result5.push(splitSwap[i].toUpperCase());
+
+        } else if (splitSwap[i] == splitSwap[i].toUpperCase()) {
+            result5.push(splitSwap[i].toLowerCase());
+
+        }
+    }
+
+    return result5.join('');
+
+}
+
+console.log(swap('Hello World'));
+
+console.log('**********************');
 
 // BONUS
 
@@ -126,7 +147,7 @@ function countEach(stringXO) {
 
     } else if (x !== o) {
         return false;
-        
+
     }
 }
 
