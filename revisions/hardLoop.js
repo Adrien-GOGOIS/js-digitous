@@ -79,4 +79,5 @@ for (let p = 0; p <= words.length - 1; p++) {
     }
 }
 
+
 console.log(result4);
