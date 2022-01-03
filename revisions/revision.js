@@ -54,19 +54,3 @@ function checkPal(stringCheck) {
 console.log(checkPal('racecar'));
 console.log(checkPal('laptop'));
 
-// 04 - Swap
-
-const lowerCase = 'azertyuiopmlkjhgfdsqwxcvnb';
-const upperCase = lowerCase.toUpperCase();
-
-function swap(stringSwap) {
-    let split = stringSwap.split('');
-
-    for (let j = 0; j <= split.length; j++) {
-        if (split[j] === )
-    }
-
-}
-
-console.log(swap('Hello World'));
-
