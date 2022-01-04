@@ -1,15 +1,15 @@
 // 01 - Comptons
 
-/* let result = 50;
+let result = 50;
 const max = 200;
 
 while (result <= 200) {
     if (result % 2 === 0) {
-        console.log(result)
+        console.log(result);
     }
 
     result++;
-} */
+}
 
 // 02 - Try again
 
@@ -17,7 +17,7 @@ let dice = null;
 let count = 0;
 
 while (dice !== 6) {
-    dice = Math.floor(Math.random() * (6 - 1 + 1) + 1);
+    dice = Math.floor(Math.random() * (6 + 1));
     count++;
 }
 
@@ -25,7 +25,7 @@ console.log(count);
 
 // 03 - Course
 
-/* let ussainBolt = 0,
+let ussainBolt = 0,
     tysonGay = 0;
 
 while (ussainBolt <= 100 || tysonGay <= 100) {
@@ -39,7 +39,7 @@ while (ussainBolt <= 100 || tysonGay <= 100) {
         } else if (tysonGay >= 100 && tysonGay > ussainBolt) {
             return console.log('Tyson Gay!');
         }
-} */
+}
 
 // 04 - Des boîtes
 

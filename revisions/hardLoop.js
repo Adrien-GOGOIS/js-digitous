@@ -6,8 +6,6 @@ for (let i = 1; i <= 50; i++) {
     numbers.push(Math.floor(Math.random() * (100 + 1)));
 }
 
-console.log(numbers);
-
 let result = 0;
 
 for (let j = 0; j <= numbers.length - 1; j++) {
@@ -15,6 +13,7 @@ for (let j = 0; j <= numbers.length - 1; j++) {
 }
 
 console.log(result);
+console.log('------------EXO 2-----------');
 
 // 02 - Max
 
@@ -23,8 +22,6 @@ let numbers1 = [];
 for (let k = 1; k <= 50; k++) {
     numbers1.push(Math.floor(Math.random() * (200 - 50 + 1) + 50));
 }
-
-console.log(numbers1);
 
 let result1 = null;
 
@@ -36,7 +33,7 @@ for (let m = 0; m <= numbers1.length; m++) {
 
 console.log(result1);
 
-console.log('__________________');
+console.log('________EXO 3__________');
 
 // 03 - Unique
 
@@ -46,38 +43,54 @@ for (let k = 1; k <= 50; k++) {
     numbers2.push(Math.floor(Math.random() * (200 - 50 + 1) + 50));
 }
 
-console.log(numbers2);
+let result3 = 0;
+let N = numbers2.length;
 
-let result3 = null;
-let n = 0;
-
-while (n <= numbers2.length - 1) {
-
-    if (numbers2[n] >= 75 && numbers2[n] <= 100) {
-    result3 = numbers2[n];
+while (N >= 0) {
+    if (numbers2[N] >= 75 && numbers2[N] <= 100) {
+        result3 = numbers2[N]; 
     }
 
-    n++;
+    N--
 }
 
 console.log(result3);
-console.log('-------------------------------')
+
+console.log('---------------EXO 4----------------')
 
 // 04 - Nested Loop
 
-const words = ["hello", "goodbye", "yes", "no", "stop", "go go go"];
-let splited = [];
-let result4 = 0;
+const tab = ["hello", "goodbye", 78, "no", "stop", "go go go"];
 
-for (let p = 0; p <= words.length - 1; p++) {
-    splited.push(words[p].split(''));
+function splitWordsAddInTab(words) {
 
-    for (let q = 0; q <= splited.length - 1; q++) {
-        if (splited[q] === 'o') {
-            result4++;
+    // GUARD
+    if (!Array.isArray(words)) {
+        console.log('We need an array here!');
+        return null;
+    }
+
+    let number0 = 0;
+
+    for (let i = 0; i < words.length; i++) {
+
+        // GUARD
+        if (typeof(words[i]) !== 'string') {
+            console.log('We need an array of string');
+            return null;
+        }
+
+        let word = words[i].split("");
+
+        for (let j = 0; j < word.length; j++) {
+            if (word[j] === 'o') {
+                number0++;
+            }
         }
     }
+
+    return number0;
+
 }
 
-
-console.log(result4);
+console.log(splitWordsAddInTab(tab));

@@ -62,10 +62,10 @@ function swap(stringSwap) {
 
     for (let i = 0; i <= splitSwap.length - 1; i++) {
 
-        if (splitSwap[i] == splitSwap[i].toLowerCase()) {
+        if (splitSwap[i] === splitSwap[i].toLowerCase()) {
             result5.push(splitSwap[i].toUpperCase());
 
-        } else if (splitSwap[i] == splitSwap[i].toUpperCase()) {
+        } else if (splitSwap[i] === splitSwap[i].toUpperCase()) {
             result5.push(splitSwap[i].toLowerCase());
 
         }

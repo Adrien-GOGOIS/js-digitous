@@ -13,9 +13,7 @@ console.log(result);
 let result1 = 0;
 
 for (let i = 100; i <= 1000; i++) {
-    if (i % 7 !== 0) {
-        continue;
-    } else {
+    if (i % 7 === 0) {
         result1++;
     }
 }
@@ -27,7 +25,7 @@ console.log(result1);
 let result2 = 0;
 
 for (let i = 1; i <= 20; i++) {
-    let launch = Math.floor(Math.random() * (6 - 1 + 1) + 1);
+    let launch = Math.floor(Math.random() * 6 + 1);
     if (launch >= 5) {
         result2 += launch;
     }
