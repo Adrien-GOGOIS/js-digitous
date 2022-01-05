@@ -41,3 +41,11 @@ function motus() {
 }
 
 motus();
+
+// TODO
+
+/* 
+- Stopper le programme avec un message gagnant ou perdant 
+- Détecter si une lettre apparait 2 fois
+- Limiter le programme à 5 essais
+*/
