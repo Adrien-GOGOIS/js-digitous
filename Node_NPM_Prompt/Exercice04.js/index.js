@@ -12,6 +12,7 @@ function play() {
 
         if (isNaN(num)) {
             console.log('ERROR');
+            console.log('Please enter un number');
             play();
         }
 
