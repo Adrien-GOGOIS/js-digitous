@@ -1,3 +1,5 @@
+// 01 - CALCULATOR
+
 function calculate(n, n1, op) {
     switch(op) {
         case 'x' :
