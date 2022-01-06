@@ -3,7 +3,7 @@ const prompt = require('prompt');
 
 prompt.start();
 
-const mysteryWord = 'coder';
+const mysteryWord = 'argents';
 
 function motus() {
 
@@ -37,6 +37,14 @@ function motus() {
 
         }
 
+        if (mysteryWord === userWord.toString()) {
+            console.log('*** ! MOTUS ! ***');
+
+        } else {
+            console.log('Essaies encore...');
+            motus();
+        }
+
     })
 }
 
@@ -45,7 +53,6 @@ motus();
 // TODO
 
 /* 
-- Stopper le programme avec un message gagnant ou perdant 
 - Détecter si une lettre apparait 2 fois
 - Limiter le programme à 5 essais
 */
