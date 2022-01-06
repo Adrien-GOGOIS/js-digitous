@@ -18,8 +18,8 @@ function checkProfile() {
 
         prompt.get({name : 'pseudo', description : 'Entrez votre pseudo'}, function(err, res) {
 
-            let username = Object.values('pseudo');
-            let regex1 = new RegExp('^([0-9a-zA-Z-])$');
+            let username = Object.values(res);
+            let regex1 = new RegExp('^[\w-]$');
 
             if (regex1.test(username)) {
                 return console.log('ERROR');
@@ -30,8 +30,8 @@ function checkProfile() {
 
                 prompt.get({name : 'mdp', description : 'Entrez votre mot de passe'}, function(err, res) {
 
-                    let userPassword = Object.values('mdp');
-                    let regex2 = new RegExp('^([0-9a-zA-Z-]){6}$');
+                    let userPassword = Object.values(res);
+                    let regex2 = new RegExp('^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[-+!*$@%_])([-+!*$@%_\w]{6})$');
 
                     if (regex2.test(userPassword)) {
                         console.log('ERROR');
