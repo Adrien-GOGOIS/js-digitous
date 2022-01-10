@@ -29,8 +29,8 @@ const cakes = [
 
 const soldOut = cakes.filter(function(item) {
     return item['flavor'] === 'chocolate';
-}).map(function(available) {
-    return available['status'] = 'Sold out!';
+}).map(function(available) {	
+    return {...available, status : 'Sold out!'};
 });
 
 console.log(soldOut);

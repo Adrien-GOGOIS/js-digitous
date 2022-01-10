@@ -6,36 +6,33 @@ const mysteryWord = 'soupe';
 
 function pendu() {
 
-        let splitMysteryWord = mysteryWord.split('');
+    let splitMysteryWord = mysteryWord.split('');
 
-        let userTry = 10;
+    let userTry = 10;
+        
+        prompt.get({name : 'letter', description : `Rentre une lettre`}, function(err, res) {
 
-        while (userTry >= 0) {
+            const userLetter = Object.values(res);
+            let result = [];
 
-            prompt.get({name : 'letter', description : `Rentre une lettre`}, function(err, res) {
-
-                const userLetter = Object.values(res);
-                let result = [];
-
-                console.log(result.join(''));
-                console.log(`Il vous reste ${userTry} essais`);
-
-                for (let i = 0; i < splitMysteryWord.length; i++) {
-                    
-                    if (userLetter.toString() === splitMysteryWord[i]) {
-                        result.push(userLetter);
-                    
-                    } else {
-                        result.push(' _ ');
+            for (let i = 0; i < splitMysteryWord.length; i++) {
                 
-                    }
-
+                if (userLetter.toString() === splitMysteryWord[i]) {
+                    result.push(userLetter);
+                
+                } else {
+                    result.push(' _ ');
+            
                 }
-            });
+            }
 
+            console.log(result.join(''));
             userTry--;
+            console.log(`Il vous reste ${userTry} essais`);
 
-        }
+        });
+
 }
+
 
 pendu();
