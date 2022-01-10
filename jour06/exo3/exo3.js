@@ -51,4 +51,48 @@ function checkProfile() {
 
 }
 
-checkProfile();
+// checkProfile();
+
+// CORRECTION 
+
+function checkProfile2() {
+
+    prompt.get([
+        {
+            name : 'email',
+            description : 'Entrez votre mail',
+            required : true
+        },
+        {
+            name : 'username',
+            description : 'Entrez votre pseudo'
+        },
+        {
+            name : 'password',
+            description : 'Entrez votre mdp',
+        },
+    ],
+        function (err, res) {
+
+            if (err) {
+                console.log('Something went wrong');
+                return;
+            }
+
+            const emailFormat = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
+            const usernameFormat = /^[A-Za-z0-9-]*$/;
+            const passwordFormat = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/;
+
+            if (emailFormat.test(res.email) && usernameFormat.test(res.username) && passwordFormat.test(res.password)) {
+                console.log('All good!');
+
+            } else {
+                console.log('ERROR!');
+            }
+        }
+    
+    )
+
+}
+
+checkProfile2();
