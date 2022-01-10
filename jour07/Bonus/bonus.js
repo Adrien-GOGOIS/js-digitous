@@ -2,37 +2,47 @@ const prompt = require('prompt');
 
 prompt.start();
 
-const mysteryWord = 'soupe';
+const mysteryWord = 'kayak';
 
-function pendu() {
+let splitMysteryWord = mysteryWord.split('');
 
-    let splitMysteryWord = mysteryWord.split('');
+let userTry = 10;
 
-    let userTry = 10;
+let result = ['_', '_', '_', '_', '_'];
         
+
+    function guess() {
+
+        if (result === splitMysteryWord) {
+            return console.log('*** GAGNE ***');
+        }
+
+        if (userTry === 0) {
+            return console.log('*** PENDU ***');
+        }
+
         prompt.get({name : 'letter', description : `Rentre une lettre`}, function(err, res) {
 
             const userLetter = Object.values(res);
-            let result = [];
-
+            
             for (let i = 0; i < splitMysteryWord.length; i++) {
                 
                 if (userLetter.toString() === splitMysteryWord[i]) {
-                    result.push(userLetter);
+                    result.splice(i, 1, `${userLetter}`);
                 
-                } else {
-                    result.push(' _ ');
-            
-                }
+                } 
             }
 
             console.log(result.join(''));
             userTry--;
             console.log(`Il vous reste ${userTry} essais`);
+            guess();
 
         });
 
-}
+    
+    }
 
 
-pendu();
+
+guess();
