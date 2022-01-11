@@ -38,28 +38,30 @@ function blackJack() {
             player = player + Math.floor(Math.random() * (10) + 1);
             console.log(`Votre score est de : ${player}`);
 
-            if(player < 21) {
-                prompt.get({name : 'letter', description : '"draw" ou "pass"?'}, function(err, res) {
-                    let choice2 = Object.values(res);
+                /*    if(player < 21) {
+                        prompt.get({name : 'letter', description : '"draw" ou "pass"?'}, function(err, res) {
+                            let choice2 = Object.values(res);
 
-                    if (choice2[0] === 'd') {
-                        player = player + Math.floor(Math.random() * (10) + 1);
-                        console.log(`Votre score est de : ${player}`);
-                    }
+                            if (choice2[0] === 'd') {
+                                player = player + Math.floor(Math.random() * (10) + 1);
+                                console.log(`Votre score est de : ${player}`);
+                            }
 
-                    if (player > 21) {
-                        return console.log('Perdu!');
-                    } else if (player === 21) {
-                        return console.log('BLACK JACK !', 'Score de la banque : ' + bank);
-                    } else if (player > bank) {
-                        return console.log('Gagné!', 'Score de la banque : ' + bank);
-                    }
-                });
-            }
+                            if (player > 21) {
+                                return console.log('Perdu!');
+                            } else if (player === 21) {
+                                return console.log('BLACK JACK !', 'Score de la banque : ' + bank);
+                            } else if (player > bank) {
+                                return console.log('Gagné!', 'Score de la banque : ' + bank);
+                            }
+                        });
+                    }   */
+        }
 
         // SI LE JOUEUR DECIDE DE PASSER :
-        } else if (choice[0] === 'p') {
+        if (choice[0] === 'p') {
             console.log('Vous avez passé');
+            console.log(`Votre score est de : ${player}`);
         }
 
         // RESULTAT FINAL
@@ -69,6 +71,8 @@ function blackJack() {
             return console.log('BLACK JACK !', 'Score de la banque : ' + bank);
         } else if (player > bank) {
             return console.log('Gagné!', 'Score de la banque : ' + bank);
+        } else if (player < bank) {
+            return console.log('Perdu !', 'Score de la banque : ' + bank);
         }
 
     });
